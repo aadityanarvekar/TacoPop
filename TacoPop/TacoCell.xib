@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TacoCell" id="gTV-IL-0wX" customClass="TacoCell" customModule="TacoPop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chicken" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-lg-JMs">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundedCorner">
+                                <real key="value" value="7.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Taco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tFp-kl-aOj">
+                        <rect key="frame" x="0.0" y="120" width="150" height="30"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tFp-kl-aOj" secondAttribute="trailing" id="0Ky-uA-rHp"/>
+                <constraint firstAttribute="trailing" secondItem="caJ-lg-JMs" secondAttribute="trailing" id="0Zr-SB-cux"/>
+                <constraint firstItem="tFp-kl-aOj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Mxo-gW-GXC"/>
+                <constraint firstItem="caJ-lg-JMs" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="Opk-NM-ZUb"/>
+                <constraint firstItem="caJ-lg-JMs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QBd-yM-VX3"/>
+                <constraint firstAttribute="bottom" secondItem="tFp-kl-aOj" secondAttribute="bottom" id="SEX-dW-7I1"/>
+                <constraint firstItem="tFp-kl-aOj" firstAttribute="top" secondItem="caJ-lg-JMs" secondAttribute="bottom" id="eUz-q6-spB"/>
+                <constraint firstItem="caJ-lg-JMs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pQQ-Zw-3L0"/>
+            </constraints>
+            <size key="customSize" width="206" height="156"/>
+            <connections>
+                <outlet property="tacoImage" destination="caJ-lg-JMs" id="wNN-aW-tNT"/>
+                <outlet property="tacoLbl" destination="tFp-kl-aOj" id="7ax-aa-k01"/>
+            </connections>
+            <point key="canvasLocation" x="-64" y="-13"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Chicken" width="4627" height="3065"/>
+    </resources>
+</document>
